@@ -4,7 +4,7 @@ return {
     config = function(_, opts)
       local cmp = require("cmp")
 
-      local mymappings = {
+      local mappings = {
         ["<Up>"] = cmp.mapping.select_prev_item(),
         ["<Down>"] = cmp.mapping.select_next_item(),
         ["<Tab>"] = cmp.mapping.confirm({
@@ -12,7 +12,7 @@ return {
           select = true,
         }),
       }
-      opts.mapping = vim.tbl_deep_extend("force", opts.mapping, mymappings)
+      opts.mapping = vim.tbl_deep_extend("force", opts.mapping, mappings)
       cmp.setup(opts)
     end,
   }
